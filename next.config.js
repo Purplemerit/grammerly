@@ -6,9 +6,6 @@ const nextConfig = {
     domains: ['localhost'],
     formats: ['image/avif', 'image/webp'],
   },
-  experimental: {
-    serverActions: true,
-  },
   env: {
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
     NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,
