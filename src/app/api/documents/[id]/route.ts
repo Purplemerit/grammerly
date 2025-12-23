@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createServerClient } from '@/lib/supabase/client';
+import { createDirectClient } from '@/lib/supabase/client';
 
 export async function GET(
   request: NextRequest,
   { params }: { params: { id: string } },
 ) {
   try {
-    const supabase = createServerClient();
+    const supabase = createDirectClient();
     const {
       data: { user },
     } = await supabase.auth.getUser();
@@ -45,7 +45,7 @@ export async function PUT(
   { params }: { params: { id: string } },
 ) {
   try {
-    const supabase = createServerClient();
+    const supabase = createDirectClient();
     const {
       data: { user },
     } = await supabase.auth.getUser();
@@ -87,7 +87,7 @@ export async function DELETE(
   { params }: { params: { id: string } },
 ) {
   try {
-    const supabase = createServerClient();
+    const supabase = createDirectClient();
     const {
       data: { user },
     } = await supabase.auth.getUser();

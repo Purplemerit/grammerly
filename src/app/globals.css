@@ -54,7 +54,7 @@
     @apply w-full px-4 py-3 text-base text-gray-800 bg-white border border-gray-200 rounded-base;
     @apply transition-all duration-normal ease-out;
     @apply placeholder:text-gray-400;
-    @apply focus:border-primary focus:ring-3 focus:ring-primary/10 focus:outline-none;
+    @apply focus:border-primary focus:ring-2 focus:ring-primary/10 focus:outline-none;
     @apply disabled:bg-gray-100 disabled:text-gray-500 disabled:cursor-not-allowed;
   }
 
@@ -69,20 +69,20 @@
     @apply hover:shadow-lg hover:-translate-y-1;
   }
 
-  /* Typography */
-  .text-display-xl {
-    @apply text-display-xl font-bold text-gray-800;
+  /* Typography - Custom helper classes */
+  .text-display-xl-styled {
+    @apply text-display-xl text-gray-800;
   }
 
-  .text-display-lg {
-    @apply text-display-lg font-semibold text-gray-800;
+  .text-display-lg-styled {
+    @apply text-display-lg text-gray-800;
   }
 
-  .text-heading-xl {
-    @apply text-heading-xl font-semibold text-gray-800;
+  .text-heading-xl-styled {
+    @apply text-heading-xl text-gray-800;
   }
 
-  .text-body {
+  .text-body-styled {
     @apply text-body text-gray-600 leading-relaxed;
   }
 }
