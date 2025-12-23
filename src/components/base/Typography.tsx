@@ -8,7 +8,7 @@ export interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
 
 export const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
   ({ as, level = 1, className, children, ...props }, ref) => {
-    const Component = as || (`h${level}` as keyof JSX.IntrinsicElements);
+    const Component = (as || `h${level}`) as 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
     const levels = {
       1: 'text-display-xl font-bold',
       2: 'text-display-lg font-semibold',

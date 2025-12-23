@@ -6,7 +6,7 @@ import type { RealtimeChannel } from '@supabase/supabase-js';
  */
 export function subscribeToDocument(
   documentId: string,
-  callback: (payload: any) => void,
+  callback: (payload: unknown) => void,
 ): RealtimeChannel {
   const supabase = createClient();
   
@@ -40,7 +40,7 @@ export function unsubscribeFromDocument(channel: RealtimeChannel) {
  */
 export function subscribeToDocumentsList(
   userId: string,
-  callback: (payload: any) => void,
+  callback: (payload: unknown) => void,
 ): RealtimeChannel {
   const supabase = createClient();
   
